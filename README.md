@@ -1,6 +1,7 @@
 # NodeJS application
 #simple app build
-A simple application to test REST and SocketIO connectivity and experiment with node.js deployement models. This is an accompanying app 
+#doing demo for github webhook
+A simple application to test REST and SocketIO connectivity and experiment with node.js deployement models. This is an accompanying app
 for YouTube series - **"Deploying Node"** https://www.youtube.com/playlist?list=PLQlWzK5tU-gDyxC1JTpyC2avvJlt3hrIh
 
 Check out the deployed version at https://nanogram.io
@@ -30,7 +31,7 @@ pm2 start --name easy-2 main.js -- --name easy-2 --port 8081
 ```
 
 # Project Structure
-The node.js app contains only one file - `main.js`. There are some static files to present a (reasonably awkward) 
+The node.js app contains only one file - `main.js`. There are some static files to present a (reasonably awkward)
 UI in `public` folder.
 
 NGINX configs are in `conf/nginx` folder
@@ -48,5 +49,3 @@ An application exposes REST and SocketIO APIs
 
 ## SocketIO API
 For every connected client, an application listens to `heartbeat` event. Once event is received, server will send back `heartbeat` event with the same payload as client sent, adding the name of the node that processed event. Useful to test socket.io connectivity as well as roundtrip times.
-
-
